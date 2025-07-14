@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM 예제</title>
+  <link rel="stylesheet" href="domEx.css" />
+</head>
+<body>
+
+<button id="btn">눌러봐 오이</button>
+<p id="text">안 눌림</p>
+
+<script>
+  const btn = document.getElementById('btn');
+  const text = document.getElementById('text');
+
+  btn.addEventListener('click', () => {
+    text.textContent = '눌렸어요 🥒';
+  });
+</script>
+
+
+<input type="text" id="nameInput" placeholder="이름 입력" />
+<button id="submitBtn">확인</button>
+<p id="result"></p>
+
+<script>
+  const input = document.getElementById('nameInput');
+  const result = document.getElementById('result');
+
+  document.getElementById('submitBtn').addEventListener('click', () => {
+    result.textContent = `안녕하세요, ${input.value}님!`;
+  });
+</script>
+
+
+<input id="colorInput" type="text" placeholder="입력하세요" />
+<button id="printBtn">출력</button>
+<p id="output"></p>
+
+<script>
+  const input2 = document.getElementById('colorInput');
+  const button = document.getElementById('printBtn');
+  const output = document.getElementById('output');
+
+  button.addEventListener('click', () => {
+    output.textContent = input2.value;
+    output.style.color = 'red'; // 💡 핵심 포인트
+  });
+</script>
+
+
+<button id="toggleBtn">색상 바꾸기</button>
+<div id="box" class="blue-box"></div>
+
+
+<script>
+  const chgBtn = document.getElementById('toggleBtn');
+  const box = document.getElementById('box');
+
+  chgBtn.addEventListener('click', () => {
+    if (box.classList.contains('blue-box')) {
+      box.classList.remove('blue-box');
+      box.classList.add('red-box');
+    } else {
+      box.classList.remove('red-box');
+      box.classList.add('blue-box');
+    }
+
+    // 🔁 한 줄로 쓰면 ↓ 이렇게도 가능
+    // box.classList.toggle('red-box');
+  });
+</script>
+
+<ul id="list">
+  <li>기존 항목</li>
+</ul>
+<button id="addItem">추가</button>
+<button id="removeItem">삭제</button>
+
+<script>
+  const list = document.getElementById('list');
+  const addBtn = document.getElementById('addItem');
+  const removeBtn = document.getElementById('removeItem');
+
+  addBtn.addEventListener('click', () => {
+    const newItem = document.createElement('li');
+    newItem.textContent = '새 항목';
+    list.appendChild(newItem);
+  });
+
+  removeBtn.addEventListener('click', () => {
+    const lastItem = list.lastElementChild;
+    if (lastItem) {
+      list.removeChild(lastItem);
+    }
+  });
+</script>
+</body>

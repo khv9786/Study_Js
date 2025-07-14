@@ -1,0 +1,16 @@
+<!-- Q5. 다음 HTML에 대해 버튼 클릭 시 input 값을 파란색으로 출력하고, 글자 길이가 10 이상이면 빨간색으로 바뀌게 하세요. -->
+<input id="userInput" />
+<button id="printBtn">출력</button>
+<p id="result"></p>
+
+
+<script>
+  const input = document.getElementById('userInput');
+  const btn = document.getElementById('printBtn');
+  const result = document.getElementById('result');
+
+  btn.addEventListener('click', () => {
+    result.textContent = input.value;
+    result.style.color = input.value.length >= 10 ? 'red' : 'blue';
+  });
+</script>

@@ -1,0 +1,35 @@
+<!-- <html>
+
+<head>
+  <script>
+    alert( "HEAD: " + document.body ); // null, 아직 <body>에 해당하는 노드가 생성되지 않았음
+  </script>
+</head>
+
+<body>
+
+  <script>
+    alert( "BODY: " + document.body ); // HTMLBodyElement, 지금은 노드가 존재하므로 읽을 수 있음
+  </script>
+
+</body>
+</html> -->
+
+<html>
+<body>
+  <div>시작</div>
+
+  <ul>
+    <li>항목</li>
+  </ul>
+
+  <div>끝</div>
+
+  <script>
+    for (let i = 0; i < document.body.childNodes.length; i++) {
+      alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ... , SCRIPT
+    }
+  </script>
+  ...추가 내용...
+</body>
+</html>

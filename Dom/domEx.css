@@ -1,0 +1,22 @@
+/* 공통 스타일 */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.red-text {
+  color: red;
+}
+
+/* 문제 2: 색상 토글 박스 */
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.red-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

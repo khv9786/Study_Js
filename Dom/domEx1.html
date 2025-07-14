@@ -1,0 +1,27 @@
+<html>
+<body>
+  <div>사용자:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+</body>
+</html>
+
+<!-- DOM 노드에 접근하려면 -->
+
+<script>
+  // body의 첫 번째 자식 노드에 접근
+  alert(document.body.firstChild); // Text, "사용자:"
+
+  // body의 마지막 자식 노드에 접근
+  alert(document.body.lastChild); // Text, "John"
+
+  // body의 첫 번째 자식 노드의 다음 형제 노드에 접근
+  alert(document.body.firstChild.nextSibling); // DIV, <ul> 요소
+
+  // body의 마지막 자식 노드의 이전 형제 노드에 접근
+  alert(document.body.lastChild.previousSibling); // LI, "Pete"
+  </script>
+
+  

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<p>스크립트 전</p>
+
+  <!-- <script>
+    alert('Hello')
+    alert('World')
+  </script> -->
+
+  <p>스크립트 후</p>
+  <script src="alert.js"></script>
+
+    <script>
+    [1, 2].forEach(alert)
+    alert("이것은 실행되지 않습니다.")
+/*     js는 세미클론을 알아서 추가해주는 특징 때문에
+    [1, 2].forEach(alert)와 alert("이것은 실행되지 않습니다.")도 진행가능 */
+    </script>
+
+    <script>
+    [1, 2].forEach(alert);
+    alert("실행 가능, 세미클론 차이")
+    </script>
+
+  
+
+</body>
+
+</html>
